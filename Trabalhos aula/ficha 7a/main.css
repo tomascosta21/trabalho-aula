@@ -1,0 +1,69 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: "Nunito", sans-serif;
+  }
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  color: #5b7772;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 80vh auto 40vw (min-content)[3];
+      grid-template-rows: 80vh auto 40vw repeat(3, -webkit-min-content);
+      grid-template-rows: 80vh auto 40vw repeat(3, min-content);
+  -ms-grid-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] ([col-start] minmax(min-content, 14rem) [col-end] minmax(6rem, 1fr) [full-end])[8];
+      grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 14rem) [col-end] minmax(6rem, 1fr) [full-end]);
+      grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end] minmax(6rem, 1fr) [full-end]);
+}
+
+.sidebar {
+  background-color: #009E74;
+  grid-column: sidebar-start / sidebar-end;
+  grid-row: 1 / -1;
+}
+
+.header {
+  background-color: #007460;
+}
+
+.footer {
+  background-color: #101d2c;
+}
+
+.empreendedores {
+  background-color: #101d2c;
+}
+
+.story__pictures {
+  background-color: #009E74;
+}
+
+.story__content {
+  background-color: #f9f7f6;
+}
+
+.gallery {
+  background-color: #f9f7f6;
+}
+/*# sourceMappingURL=main.css.map */
